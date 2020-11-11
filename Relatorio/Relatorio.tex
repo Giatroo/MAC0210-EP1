@@ -1,0 +1,87 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper, oneside]{article} 
+
+\input{settings/giatro_packages.tex}
+
+\input{settings/giatro_macros.tex}
+
+\title{Relatório - EP1}
+\date{\today}
+\author{Lucas Paiolla Forastiere}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Parte 1}
+
+Utilizei apenas uma função, que é a mesma utilizada no Método de Newton.
+Com ela tenho garantia que convergerá dentro de um intervalo dentrado
+nas raízes. 
+
+Como critérios de parada utilizei ou quando o valor absoluto de $f(x)$
+aumenta de uma iteração para a outra (e daí concluímos que o método divergiu)
+ou quando o valor absoluto de $f(x)$ fica menor que $EPS=10^{-12}$
+
+Como resultados obtive:
+\begin{enumerate}
+    \item Pontos aproximadamente de $0$ para menor convergem 
+    para $-0.539835$;
+    \item Pontos entre $0.4$ e $0.6$ aproximadamente convergem para 
+    $2.617867$;
+    \item Pontos entre $0.67$ e $0.68$ aproximadamente convergem para
+    $-0.539835$;
+    \item O ponto $0.69$ converge novamente para $2.617867$;
+    \item De $0.7$ até $2$, converge para $1.487962$;
+    \item O ponto $2.1$ converge para  $-0.539835$;
+    \item De aí para frente começa a convergir para $2.617867$;
+    \item Apenas lá a partir de $710$ que começa a divergir;
+    \item Já por pontos negativos, nem chegou a divergir.
+\end{enumerate}
+
+\section{Parte 2}
+
+Na segunda parte, fiz vários testes. Os plots ficara muito bonitos, mas não consegui
+achar aqueles pontinhos de divergência igual à foto do professor.
+
+Podemos perceber que ao mudar uma constante, a imagem fica rotacionada.
+
+Como critério de parada, utilizei uma função para igualdade de complexos
+que considera as componentes reais e imaginárias (se ambas estão próximas
+de zero).
+
+As imagens geradas são mostradas a seguir:
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{/home/giatro/Desktop/IME/3_Semestre/Laboratorio_de_Metodos_Numericos_MAC0210/EPs/1EP/f1.jpeg}
+    \caption{$f_1(x)=x^6+1$}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{/home/giatro/Desktop/IME/3_Semestre/Laboratorio_de_Metodos_Numericos_MAC0210/EPs/1EP/f2.jpeg}
+    \caption{$f_2(x)=x^6-1$}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{/home/giatro/Desktop/IME/3_Semestre/Laboratorio_de_Metodos_Numericos_MAC0210/EPs/1EP/f3.jpeg}
+    \caption{$f_3(x)=x^6+x$}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{/home/giatro/Desktop/IME/3_Semestre/Laboratorio_de_Metodos_Numericos_MAC0210/EPs/1EP/f4.jpeg}
+    \caption{$f_3(x)=x^6-x$}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{/home/giatro/Desktop/IME/3_Semestre/Laboratorio_de_Metodos_Numericos_MAC0210/EPs/1EP/f5.jpeg}
+    \caption{$f_3(x)=x^3-1$}
+\end{figure}
+
+\end{document}

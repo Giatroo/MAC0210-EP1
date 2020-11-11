@@ -1,0 +1,6 @@
+Comandos gnuplot:
+
+unset key
+set xrange [-2:2]
+set yrange [-2:2]
+plot "0.dat" lt 0 lc 11, "1.dat" lt 0 lc 7, "2.dat" lt 0 lc 12, "3.dat" lt 0 lc 9, "4.dat" lt 0 lc 10, "5.dat" lt 0 lc 5, "not.dat" lt 0 lc -1
